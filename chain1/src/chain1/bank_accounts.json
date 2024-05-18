@@ -1,0 +1,30 @@
+{
+    "111": {
+        "Address": "Coimbatore",
+        "Nationality": "Indian",
+        "aadhar_id": "11223344",
+        "balance": 160000.0,
+        "date_of_birth": "16 Feb 1994",
+        "fathers_name": "test",
+        "first_name": "User1",
+        "id": "111",
+        "last_name": "lastname1",
+        "mothers_name": "test",
+        "pan_id": "123L",
+        "payee_list": {}
+    },
+    "113": {
+        "Address": "Bangalore",
+        "Nationality": "Indian",
+        "aadhar_id": "11223345",
+        "balance": 100000.0,
+        "date_of_birth": "1994-02-16T15:53:00+05:30",
+        "fathers_name": "test",
+        "first_name": "User2",
+        "id": "113",
+        "last_name": "lastname2",
+        "mothers_name": "test",
+        "pan_id": "456L",
+        "payee_list": {}
+    }
+}
