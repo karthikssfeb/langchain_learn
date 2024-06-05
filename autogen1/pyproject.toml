@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "autogen1"
+version = "0.1.0"
+description = ""
+authors = ["Karthick Shanmuga Rao <karthikssfeb@gmail.com>"]
+readme = "README.md"
+packages = [{include = "autogen1", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
