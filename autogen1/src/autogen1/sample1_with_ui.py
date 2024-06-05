@@ -5,12 +5,11 @@ from autogen import Cache
 def run_assistant(message):
     # Define the configuration for the Code Llama model
     config_list = [
-        {
-            "model": "mistral",
-            "base_url": "http://localhost:11434/v1",
-            "api_key": "ollama",
-            "seed": None
-        }
+    {
+        "model": "codellama:7b-instruct",
+        "base_url": "http://localhost:11434/v1",
+        "api_key": "ollama",
+    }
     ]
 
     # Create an AssistantAgent with the Code Llama model
@@ -19,10 +18,10 @@ def run_assistant(message):
     # Create a UserProxyAgent that can execute code
     user_proxy = UserProxyAgent(
         "user_proxy",
-        # is_termination_msg = lambda x: x.get("content", "") and x.get("content", "").rstrip().endswith("TERMINATE"),
-        # max_consecutive_auto_reply=10,
+        is_termination_msg = lambda x: x.get("content", "") and x.get("content", "").rstrip().endswith("TERMINATE"),
+        max_consecutive_auto_reply=10,
         code_execution_config={"work_dir": "coding", "use_docker": False},
-        # human_input_mode="NEVER"
+        human_input_mode="NEVER"
         )
 
     # Initiate a chat between the user proxy and the assistant
